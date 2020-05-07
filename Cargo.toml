@@ -1,0 +1,8 @@
+[package]
+name = "git-hooks"
+version = "1.0.0"
+authors = ["Niels Majer <niels.majer@gmail.com>"]
+
+[dependencies]
+git2 = "0.13"
+regex = "1"

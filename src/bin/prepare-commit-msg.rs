@@ -47,8 +47,8 @@ fn get_current_branch() -> Result<String, git2::Error> {
 fn prepend_branch_name(branch_name: String,
                        commit_filename: String,
                        source: Option<String>) -> Result<(), std::io::Error> {
-    if branch_name == "develop".to_string() {
-        println!("Branch is develop. Not adding branch name to commit message.");
+    if branch_name == "master".to_string() {
+        println!("Branch is master. Not adding branch name to commit message.");
         return Ok(());
     }
 

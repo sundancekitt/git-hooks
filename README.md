@@ -2,11 +2,12 @@
 Collection of git hooks. Currently there is only one hook here:
 
 ## Prepare commit message hook
-This hook automatically adds the branch name to the commit message.
+This hook automatically adds the branch name to the commit message for branches that have the naming `feature/<ISSUE_KEY>*`.
 If not present in the commit message already, the current branch name is prepended to the commit message.
-On the master branch the commit message is left untouched.
 
-*Note*: This is only useful when the branch name starts with the issue key optionally followed by any string sequence starting with a non-numeric character (BRAHMAN-123 or BRAHMAN-123.2... or BRAHMAN-123-amendements...).
+*Note*: This only applies to branches  that follow the pattern `feature/<ISSUE_KEY>*`, where `<ISSUE_KEY>` is the Jira 
+Issue key, for example `CAIRAM-123`. Valid complete branch names can be `feature/CAIRAM-123`, 
+`feature-CAIRAM-123-more-details` or `feature/CAIRAM-123.1`.
 
 ### Requires
 * Rust/cargo
